@@ -1,3 +1,4 @@
+"""Async task to get request count from middleware."""
 import os
 from celery import Celery
 from django.conf import settings

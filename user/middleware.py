@@ -1,3 +1,4 @@
+"""Custom middleware for request counter"""
 from django.utils.deprecation import MiddlewareMixin
 from celery.decorators import task
 from .redis import redis_instance
