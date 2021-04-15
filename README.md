@@ -16,9 +16,7 @@ Create VirtualEnv:
     ```
 2. Install and run Redis and Celery
 
-   If not installed then follow these steps to install [Redis](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298)
-   and [Celery](https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298).  
-   To lean more about redis and celery rate limitting refer this [article](https://callhub.io/distributed-rate-limiting-with-redis-and-celery/).
+   To install Redis-Celery for this project, follow these steps- https://stackabuse.com/asynchronous-tasks-in-django-with-redis-and-celery/.
    
    
 3. Exporting environment variables
