@@ -1,3 +1,4 @@
+"""Utilization function for service class."""
 import requests
 from django.conf import settings
 from requests.auth import HTTPBasicAuth
