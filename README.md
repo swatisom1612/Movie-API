@@ -108,8 +108,8 @@ present>,
 
 ```bash
  application/json - {
- “title”: “<Title of the collection>”,
- “description”: “<Description of the collection>”,
+ “title”: <Title of the collection>,
+ “description”: <Description of the collection>,
  “movies”: [
  {
  “title”: <title of the movie>,
