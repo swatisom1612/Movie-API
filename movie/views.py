@@ -40,8 +40,7 @@ class MovieCollectionRetrieveUpdateDeleteView(generics.ListCreateAPIView):
 
     def get_queryset(self):
         return MovieCollection.objects.prefetch_related('collection_movies').get(pk=self.kwargs['uuid'],
-                                                                                     is_active=True, is_delete=False)
-
+                                                                                 is_active=True, is_delete=False)
 
     def get(self, request, *args, **kwargs):
         """method for get request for  movie collection"""
@@ -53,7 +52,6 @@ class MovieCollectionRetrieveUpdateDeleteView(generics.ListCreateAPIView):
                 'error': 'Invalid UUID'
             })
 
-
     def put(self, request, *args, **kwargs):
         """method for PUT request movie collection"""
         try:
@@ -63,7 +61,6 @@ class MovieCollectionRetrieveUpdateDeleteView(generics.ListCreateAPIView):
             return Response({
                 'error': 'Invalid UUID'
             })
-
 
     def delete(self, request, *args, **kwargs):
         """method for DELETE request movie collection"""
