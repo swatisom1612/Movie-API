@@ -4,8 +4,8 @@ This app gives details about movies and also users can use this for making their
 
 Create VirtualEnv:
    ```bash
-  $ python3 -m venv env
-  ```
+   $ python3 -m venv env
+   ```
   
 1. Clone and install dependencies
 
