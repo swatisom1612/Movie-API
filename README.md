@@ -188,7 +188,7 @@ movies I have added in my collections>.”
 
 ```bash
 {
-   "access_token": "access token"
+   "request_count": "request_count"
 }   
 ```
 2. `POST /request-count/reset/` 
