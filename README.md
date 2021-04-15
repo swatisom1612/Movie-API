@@ -10,8 +10,8 @@ Create VirtualEnv:
 1. Clone and install dependencies
 
     ```bash
-    $ git clone https://github.com/swatisom1612/movie-api.git
-    $ cd movie-api
+    $ git clone https://github.com/swatisom1612/Movie-API.git
+    $ cd Movie-API
     $ pip install -r requirements.txt
     ```
 2. Install and run Redis and Celery
@@ -33,7 +33,7 @@ Create VirtualEnv:
    $ python manage.py migrate
    $ python manage.py runserver
    ``` 
-### [Link for screenshots of API response](https://github.com/swatisom1612/movie-api/tree/master/postman_screenshots)   
+### I have attached API images- https://github.com/swatisom1612/Movie-API/tree/main/API_Examples)   
 ## API Documentation 
 
 ### `This Endpoint takes username and password and registers and gives the access token` 
