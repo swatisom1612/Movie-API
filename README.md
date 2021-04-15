@@ -32,8 +32,8 @@ Create VirtualEnv:
    $ manage.py makemigrations user 
    $ python manage.py migrate
    $ python manage.py runserver
-   ``` 
-### I have attached API images- https://github.com/swatisom1612/Movie-API/tree/main/API_Examples)   
+   ```  
+
 ## API Documentation 
 
 ### `This Endpoint takes username and password and registers and gives the access token` 
