@@ -1,3 +1,4 @@
+"""Service class for third party API."""
 from rest_framework.response import Response
 from django.db.models import Count
 
@@ -8,12 +9,12 @@ from movie.utils import fetch_movie_list
 
 class MovieService:
     def movie_list(self, page):
-        """ Third party movie list API """
+        """ Third party movie list API. """
         response = fetch_movie_list(page)
         return response
 
     def create(self, request):
-        """ Create new movie collection """
+        """ Create new movie collection."""
         serializer = MovieCollectionSerializer(data=request.data, context={'user': request.user})
         if serializer.is_valid():
             serializer.save()
@@ -28,8 +29,8 @@ class MovieService:
     def list(self, request):
         # fetching movie collection list for the user
         queryset = MovieCollection.objects.prefetch_related('collection_movies').filter(user=request.user,
-                                                                                            is_delete=False,
-                                                                                            is_active=True)
+                                                                                        is_delete=False,
+                                                                                        is_active=True)
         serializer = MovieCollectionSerializer(queryset, many=True)
         genres = MovieGenre.objects.values('genres').annotate(c=Count('genres')).order_by('-c')[:3]
         for value in genres:
