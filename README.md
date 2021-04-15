@@ -42,7 +42,7 @@ Create VirtualEnv:
 
 1. `POST /user/register/` 
 
-```json
+```bash
  application/json - {
     "username": "username:,
     "password": "password",
@@ -50,14 +50,14 @@ Create VirtualEnv:
 ```
 ##### `response`
 
-```json
+```bash
 {
    "access_token": "access token"
 }   
 ```
 2. `POST /user/login/` 
 
-```json
+```bash
  application/json - {
     "username": "username:,
     "password": "password",
@@ -65,14 +65,14 @@ Create VirtualEnv:
 ```
 ##### `response`
 
-```json
+```bash
 {
    "access_token": "access token"
 }
     
 ```
 ##### `For all the requests we would use this access token for authentication and permission in headers request`
-```json
+```bash
    Authorization: Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9
     
 ```
@@ -84,7 +84,7 @@ Create VirtualEnv:
 
 ##### `response`
 
-```json
+```bash
  application/json - {
  “count”: <total number of movies>,
  “next”: <link for next page, if present>,
@@ -106,7 +106,7 @@ present>,
 
 1. `POST /collection/` 
 
-```json
+```bash
  application/json - {
  “title”: “<Title of the collection>”,
  “description”: “<Description of the collection>”,
@@ -122,14 +122,14 @@ present>,
 ```
 ##### `response`
 
-```json
+```bash
 {
  “collection_uuid”: <uuid of the collection item>
 }   
 ```
 2. `PUT /collection/<collection_uuid>/` 
 
-```json
+```bash
  application/json - {
  “title”: <Optional updated title>,
  “description”: <Optional updated description>,
@@ -138,7 +138,7 @@ present>,
 ```
 ##### `response`
 
-```json
+```bash
 {
  “title”: <Title of the collection>,
  “description”: <Description of the collection>,
@@ -152,7 +152,7 @@ present>,
 
 ##### `response`
 
-```json
+```bash
 {"message": "Collection deleted successfully!"}
     
 ```
@@ -160,7 +160,7 @@ present>,
 
 ##### `response`
 
-```json
+```bash
  application/json - {
  “is_success”: True,
  “data”: {
@@ -181,14 +181,14 @@ movies I have added in my collections>.”
 
 1. `GET /request-count/` 
 
-```json
+```bash
  application/json - {
  “requests”: <number of requests served by this server till now>.
 }
 ```
 ##### `response`
 
-```json
+```bash
 {
    "access_token": "access token"
 }   
@@ -197,7 +197,7 @@ movies I have added in my collections>.”
 
 ##### `response`
 
-```json
+```bash
 {
  “message”: “request count reset successfully”
 }
