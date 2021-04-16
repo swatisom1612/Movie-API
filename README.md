@@ -1,6 +1,6 @@
 # Movie App
 This app gives details about movies and also users can use this for making their movie collections.
-## Quickstart
+## Quickstart Guide
 
 Create VirtualEnv:
    ```bash
@@ -17,8 +17,10 @@ Create VirtualEnv:
 2. Install and run Redis and Celery
 
 I used here custom middleware where through celery task I am incrementing request counter in redis database.
+I used redis built-in method INCR wich can be used for counters - http://redis.io/commands/INCR .
+Reference- https://stackoverflow.com/a/28880363/9388142
 
-   To install Redis-Celery for this project, follow these steps- https://stackabuse.com/asynchronous-tasks-in-django-with-redis-and-celery/.
+To install Redis-Celery for this project, follow these steps- https://stackabuse.com/asynchronous-tasks-in-django-with-redis-and-celery/.
    
    
 3. Exporting environment variables
