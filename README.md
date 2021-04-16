@@ -16,6 +16,8 @@ Create VirtualEnv:
     ```
 2. Install and run Redis and Celery
 
+I used here custom middleware where through celery task I am incrementing request counter in redis database.
+
    To install Redis-Celery for this project, follow these steps- https://stackabuse.com/asynchronous-tasks-in-django-with-redis-and-celery/.
    
    
