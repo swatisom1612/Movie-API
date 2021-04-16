@@ -13,7 +13,7 @@ class MovieCollectionSerializer(serializers.Serializer):
     def create(self, validated_data):
         # getting context of the user
         user = self.context.get('user')
-        # creating new movie collection
+        # creating new movie collection.
         collection = MovieCollection.objects.create(user=user, title=validated_data['title'],
                                                     description=validated_data['description'])
 
@@ -30,7 +30,7 @@ class MovieCollectionSerializer(serializers.Serializer):
     @transaction.atomic()
     def update(self, instance, validated_data):
         if len(validated_data['movies']) > 0:
-            # updating movie list if the payload is not empty
+            # updating movie list if the payload is not empty.
             MovieGenre.objects.filter(collection=instance).delete()
             collection_movies = [
                 MovieGenre(collection=instance, movie_uuid=movie['uuid'], title=movie['title'],
@@ -48,7 +48,7 @@ class MovieCollectionSerializer(serializers.Serializer):
 
     def to_representation(self, instance):
         def get_movies():
-            # get method for movie collection
+            # get method for movie collection.
             return [movie for movie in
                     instance.collection_movies.values('title', 'description', 'genres', 'movie_uuid')]
 
